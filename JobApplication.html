@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        input:focus,
+        textarea:focus {
+            border: 2px solid yellow;
+            outline: none;
+
+        }
+
+        input:invalid,
+        select:invalid,
+        textarea:invalid {
+            border-color: red;
+        }
+
+        input:valid,
+        select:valid,
+        textarea:valid {
+            border-color: green;
+        }
+
+        button:hover {
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        .option-btn{
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .radio-group input[type="radio"]:checked {
+            border: 2px solid green;
+            outline: none;
+            background-color: green;
+            box-shadow: 0px 0px 5px green;
+        }
+
+        .radio-group input[type="radio"]:checked+label {
+            color: green;
+        }
+
+        .option-btn:checked::before {
+            transform: translate(3px, 3px) scale(1);
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Job Application Form</h1>
+    <div class="container">
+        <form>
+            <label for="name">Fu                                        ll Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <label for="position">Position: </label>
+            <select id="position" name="position">
+                <option value>Select a position</option>
+                <option value="manager">Manager</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+            </select>
+            <fieldset class="radio-group">
+                <legend>Availability</legend>
+                <input class="option-btn" id="full-time" type="radio" name="availability" value="full-time" />
+                <label class="option" for="full-time">Full Time</label>
+                <input class="option-btn" id="part-time" type="radio" name="availability" value="part-time" />
+                <label class="option" for="part-time">Part Time</label>
+
+            </fieldset>
+            <label for="message">Why do you want this job?</label>
+            <textarea name="message" id="message" rows="4" cols="30"></textarea>
+            <button type="submit">Submit Application</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
