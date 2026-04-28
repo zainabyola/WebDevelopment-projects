@@ -1,0 +1,20 @@
+
+    #email{
+  padding:50px;
+  margin-top:50px;
+  width:500px;
+  border:2px solid;
+  box-sizing:border-box;
+  background-color:rgb(225,223,277);
+}
+#confidential, #top-secret{
+  display:inline-block;
+  padding:20px;
+  margin-left:10px;
+  border:2px solid rgb(255,0,0);
+  color:red;
+  transform:rotate(40deg);
+}
+.blurred{
+  filter:blur(3px);
+}
